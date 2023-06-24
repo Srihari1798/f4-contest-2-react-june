@@ -8,8 +8,7 @@ function App() {
   return (
     <div >
       <BrowserRouter>
-      {/* <Login/>
-      <Profile/> */}
+    
        <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
