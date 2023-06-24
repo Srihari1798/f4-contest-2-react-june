@@ -1,20 +1,20 @@
-import React from 'react'
-import './App.css'
-import Login from './Login'
-import Profile from './Profile'
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import Login from './Login';
+import Profile from './Profile';
 
 function App() {
   return (
-    <div >
+    <Provider store={store}>
       <BrowserRouter>
-    
-       <Routes>
+        <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </Provider>
   );
 }
 
